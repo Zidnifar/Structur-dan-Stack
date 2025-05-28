@@ -22,8 +22,8 @@ int Empty(Stack *S){
 }
 
 void Push(Stack *S, ItemType X){
-    if(S->Count == MAXSTACK){
-        cout << "Stack penuh! Data tidak dapat masuk!" << endl;
+    if( S->Count == MAXSTACK){
+        cout << "Stack penuh! Data tidak dapat masuk!" <<endl;
     }else{
         S->Item[S->Count] = X;
         ++(S->Count);
