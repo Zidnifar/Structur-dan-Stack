@@ -4,31 +4,40 @@ using namespace std;
 typedef int ItemType;
 const int MAXSTACK = 15;
 
-typedef struct{
+typedef struct {
     ItemType Item[MAXSTACK];
     int Count;
-}Stack;
+} Stack;
 
-void InitializeStack(Stack *S){
-
+void InitializeStack(Stack *S) {
+    S->Count = 0;
 }
 
-int Full(Stack *S){
-
+int Full(Stack *S) {
+    return (S->Count == MAXSTACK);
 }
 
-int Empty(Stack *S){
-
+int Empty(Stack *S) {
+    return (S->Count == 0);
 }
 
-void Pop(Stack *S, ItemType *X){
-
+void Push(Stack *S, ItemType X) {
+     if (S->Count < MAXSTACK) {
+        S->Item[S->Count++] = X; // Increment Count after assignment
+    } else {
+        cout << "Stack penuh! Data tidak dapat masuk!" << endl;
+    }
 }
 
-void Push(ItemType X, Stack *S){
-    
+void Pop(Stack *S, ItemType *X) {
+    if (S->Count > 0) {
+        *X = S->Item[--S->Count]; // Decrement Count before assignment
+    } else {
+        cout << "Stack masih kosong!" << endl;
+    }
 }
 
-int main(){
+int main() {
     return 0;
 }
+    
