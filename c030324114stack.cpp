@@ -22,18 +22,20 @@ int Empty(Stack *S){
 }
 
 void Push(Stack *S, ItemType X){
-    if(S->Count < MAXSTACK){
-        S->Item[S->Count++] = X; // Increment Count after assignment
-    }else {
+    if(S->Count == MAXSTACK){
         cout << "Stack penuh! Data tidak dapat masuk!" << endl;
+    }else{
+        S->Item[S->Count] = X;
+        ++(S->Count);
     }
 }
 
 void Pop(Stack *S, ItemType *X){
-    if(S->Count > 0){
-        *X = S->Item[--S->Count]; // Decrement Count before assignment
+    if(S->Count == 0){
+        cout<<"Stack masih kosong!" << endl;
     }else{
-        cout << "Stack masih kosong!" << endl;
+        --(S->Count);
+        *X = S->Item[S->Count];
     }
 }
 
@@ -42,6 +44,6 @@ int main(){
     InitializeStack(&S);
     ItemType data;
     char pl;
-    
+
     return 0;
 }
