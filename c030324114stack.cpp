@@ -33,10 +33,10 @@ void Push(Stack *S, ItemType X){
 void Pop(Stack *S, ItemType *X){
     if(S->Count == 0){
         cout<<"Stack masih kosong!" << endl;
-    }else{
-        --(S->Count);
-        *X = S->Item[S->Count];
-    }
+    } else {
+        -- (S->Count);
+        *X= S->Item[S->Count];
+}
 }
 
 int main(){
