@@ -40,9 +40,9 @@ void Pop(Stack *S, ItemType *X){
 }
 
 int main(){
-    Stack S;
-    ItemType temp;
-    InitializeStack(&S);
+    Stack S ;
+    ItemType temp ;
+    InitializeStack(&S) ;
 
     return 0;
 }
