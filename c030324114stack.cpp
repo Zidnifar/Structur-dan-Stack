@@ -9,35 +9,29 @@ typedef struct {
     int Count;
 } Stack;
 
-void InitializeStack(Stack *S) {
-    S->Count = 0;
+void InitializeStack(Stack *S){
+    
 }
 
-int Full(Stack *S) {
-    return (S->Count == MAXSTACK);
+int Full(Stack *S){
+   
 }
 
-int Empty(Stack *S) {
-    return (S->Count == 0);
+int Empty(Stack *S){
+   
 }
 
-void Push(Stack *S, ItemType X) {
-     if (S->Count < MAXSTACK) {
-        S->Item[S->Count++] = X; // Increment Count after assignment
-    } else {
-        cout << "Stack penuh! Data tidak dapat masuk!" << endl;
-    }
+void Push(Stack *S, ItemType X){
+     
 }
 
-void Pop(Stack *S, ItemType *X) {
-    if (S->Count > 0) {
-        *X = S->Item[--S->Count]; // Decrement Count before assignment
-    } else {
-        cout << "Stack masih kosong!" << endl;
-    }
-}
+void Pop(Stack *S, ItemType *X){
 
-int main() {
+}
+    
+
+
+int main(){
     return 0;
 }
     
