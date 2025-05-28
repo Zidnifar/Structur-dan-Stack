@@ -44,5 +44,17 @@ int main(){
     ItemType temp;
     InitializeStack(&S);
 
+    Push(&S, 10);
+    Push(&S, 20);
+    Push(&S, 30);
+    // Pop satu item
+    Pop(&S, &temp);
+    cout << "Item yang di-pop: " << temp << endl;
+
+    cout << "Isi stack sekarang (dari atas ke bawah):" << endl;
+    for (int i = S.Count - 1; i >= 0; i--) {
+        cout << S.Item[i] << endl;
+    }
+
     return 0;
 }
