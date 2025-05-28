@@ -41,9 +41,8 @@ void Pop(Stack *S, ItemType *X){
 
 int main(){
     Stack S;
+    ItemType temp;
     InitializeStack(&S);
-    ItemType data;
-    char pl;
 
     return 0;
 }
